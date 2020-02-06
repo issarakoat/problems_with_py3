@@ -12,4 +12,9 @@ T1.left.left.left = TreeNode.TreeNode(7)
 T1.left.left.right = TreeNode.TreeNode(2)
 
 _lc = Leetcode.LC()
-print(_lc.hasPathSum(T1, 27))
+assert(_lc.hasPathSum(T1, 22) == True)
+assert(_lc.hasPathSum(T1, 27) == True)
+
+T2 = TreeNode.TreeNode(-2)
+T2.right = TreeNode.TreeNode(-3)
+print(_lc.hasPathSum(T2, -5))

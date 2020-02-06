@@ -9,31 +9,28 @@ T1.right.right = TreeNode.TreeNode(7)
 class LC:
     def hasPathSum(self, root: TreeNode, sum: int) -> bool:
         stack = []
-        stack.append(root)
+        left = -1
+        right = -1
         if root:
-            check_left = root.val
-            check_right = root.val
             current_val = root.val
-        else: return False
+            print('root ', current_val)
+            stack.append((root,current_val))
+        else: 
+            return False
         while stack != []:
             expand = stack.pop()  
-            if expand.val == sum and expand.left == None and expand.right == None :
+            current_node = expand[0]
+            current_val = expand[1]
+            if current_val == sum and current_node.left == None and current_node.right == None :
                 return True
-            if expand.left:
-                if expand.left.val + check_left == sum:                   
-                    return True                   
-                elif expand.left.val + check_left < sum:                  
-                    current_val = check_left
-                    check_left += expand.left.val
-                stack.append(expand.left)
-            if expand.right:
-                if expand.right.val + check_right == sum:                   
-                    return True                    
-                elif expand.right.val + check_right < sum:
-                    current_val = check_right
-                    check_right += expand.right.val
-                    # print(current_val)
-                stack.append(expand.right)
+            if current_node.left:                                
+                left = current_val + current_node.left.val
+                print('left :', left)
+                stack.append((current_node.left, left))
+            if current_node.right:                   
+                right = current_val + current_node.right.val
+                print('right :', right)
+                stack.append((current_node.right, right))
         return False
             
 
