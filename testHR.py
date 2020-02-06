@@ -1,0 +1,3 @@
+import HackRank
+
+HackRank.SayHello()
