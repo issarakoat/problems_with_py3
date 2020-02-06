@@ -17,4 +17,4 @@ assert(_lc.hasPathSum(T1, 27) == True)
 
 T2 = TreeNode.TreeNode(-2)
 T2.right = TreeNode.TreeNode(-3)
-print(_lc.hasPathSum(T2, -5))
+assert(_lc.hasPathSum(T2, -5)  == True)
