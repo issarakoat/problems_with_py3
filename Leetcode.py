@@ -79,6 +79,23 @@ class LC:
                 if nums[i] == nums[j]:
                     return True
         return False
+    def reverse_integer(self, x: int) -> int:
+        res = 0
+        isNegative = False
+        if x < 0:
+            x *= -1
+            isNegative = True       
+        while x > 0:
+            mod = x % 10
+            res *= 10
+            res += mod
+            x = int(x/10)
+        if isNegative:
+            res *= -1
+        # so dumb sine the max val is 2^31 that why i need this if below
+        if abs(res) > (1<<31)-1:
+            return 0
+        return res
     def intersect(self, nums1, nums2):
         L = []
         if len(nums1) <= len(nums2):
