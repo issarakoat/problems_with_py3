@@ -1,4 +1,4 @@
 import Leetcode
 
 lc = Leetcode.LC()
-print(lc.reverse(-123))
+assert(lc.reverse_integer(-123) == -321)
