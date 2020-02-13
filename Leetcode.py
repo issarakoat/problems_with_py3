@@ -107,6 +107,23 @@ class LC:
                 if item in nums1:
                     L.append(item)
         return L
+    #39/68
+    def longestConsecutive(self, nums):
+        sorted_list = sorted(nums)
+        sorted_list = list(set(sorted_list))
+        count = 1
+        me_max = 1
+        print(sorted_list)
+        for i in range(1,len(sorted_list)):
+            if sorted_list[i] - sorted_list[i-1] == 1:
+                count += 1
+                print('yeah')
+            else:
+                count = 1
+            me_max = max(me_max, count)
+        print('me_maax: ',me_max)
+        return me_max
+
 
 
 
