@@ -83,3 +83,11 @@ def factorial_iter(num):
         res *= num
         num -= 1
     return res
+# so dumb cant even do 1000
+def sum_recur(n):
+    if n == 0:
+        return 1
+    return n + sum_recur(n-1)
+def List_Comprehensions(x, y, z, n):
+    print('list shit')
+
