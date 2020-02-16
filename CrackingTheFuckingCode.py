@@ -19,3 +19,16 @@ def IsUnique_1(s):
     return set_len == len(s)
 assert(IsUnique_1('abcd')==True)
 assert(IsUnique_1('absa')==False)
+
+def IsUnique_2(s):
+    check_arr = []
+    for i in range(0, 128):
+        check_arr.append(False)
+    for i in range(0, len(s)):
+        val = ord(s[i])
+        if check_arr[val]:
+            return False
+        check_arr[val] = True
+    return True
+assert(IsUnique_2('abcd')==True)
+assert(IsUnique_2('absa')==False)
