@@ -107,7 +107,7 @@ class LC:
                 if item in nums1:
                     L.append(item)
         return L
-    #39/68
+    #39/68 this is a 'hard question'
     def longestConsecutive(self, nums):
         sorted_list = sorted(nums)
         sorted_list = list(set(sorted_list))
