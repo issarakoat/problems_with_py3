@@ -32,3 +32,8 @@ def IsUnique_2(s):
     return True
 assert(IsUnique_2('abcd')==True)
 assert(IsUnique_2('absa')==False)
+
+hash_table = {1:"abc", 2:"cat", 3:"dog", 123: "zebra"}
+hash_table[321] = 'what is this'
+hash_table[321] = 'is this gonna work'
+print(hash_table)

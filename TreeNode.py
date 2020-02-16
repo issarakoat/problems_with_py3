@@ -81,10 +81,8 @@ def postorderList(root: TreeNode):
             res.insert(0,p.val)
             p = p.right
         else:
-            expand = stack.pop()
-            
+            expand = stack.pop()            
             p = expand.left
-
     return res
 
                 

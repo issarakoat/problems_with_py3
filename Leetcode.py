@@ -2,6 +2,13 @@ import TreeNode
 
 
 class LC:
+    def twoSum(self, nums, target):
+        dic = {}
+        for i in range(0, len(nums)):
+            complement = target - nums[i]
+            if complement in dic:
+                return [dic[complement], i]            
+            dic[nums[i]] = i
     def isSymmetric(self, root: TreeNode) -> bool:
         if not root:
             return root.left == root.right
