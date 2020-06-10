@@ -19,4 +19,6 @@ def countWaysInit(steps):
     for i in range(0, steps + 1):
         memo.append(-1)
     return countWays(steps, memo)
-print(countWaysInit(5))
+assert(countWaysInit(3) == 4)
+assert(countWaysInit(4) == 7) 
+assert(countWaysInit(5) == 13)
